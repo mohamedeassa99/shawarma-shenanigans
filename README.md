@@ -18,7 +18,7 @@ actually being made across six continuous shots:
 | 2 | The blade shaving the stack | ONE BLADE. THE OTHER KIND IS UNDER INVESTIGATION. |
 | 3 | Meat falling onto the saj | GRAVITY HAS BEEN BRIEFED. / THE SHEET HAS BEEN NOTIFIED. |
 | 4 | Toum pouring | NO EGG. NO DAIRY. NO EXPLANATION. |
-| 5 | Pink pickles dropping | THE PINK WAS NEVER REAL. |
+| 5 | Pink pickles dropping | THE CORRECT NUMBER IS MORE. |
 | 6 | The roll closing, orbit to hero | THE ROLL IS FINAL. / ROTATION COMPLETE. |
 
 No hands appear anywhere in the film. That is deliberate: it dodges the usual

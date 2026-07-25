@@ -15,7 +15,7 @@
     blade:   { flash: true, captions: [["ONE BLADE. THE OTHER KIND IS UNDER INVESTIGATION.", 0]] },
     saj:     { flash: true, captions: [["GRAVITY HAS BEEN BRIEFED.", 0], ["THE SHEET HAS BEEN NOTIFIED.", 0.52]] },
     toum:    { captions: [["NO EGG. NO DAIRY. NO EXPLANATION.", 0]] },
-    pickles: { flash: true, captions: [["THE PINK WAS NEVER REAL.", 0]] },
+    pickles: { flash: true, captions: [["THE CORRECT NUMBER IS MORE.", 0]] },
     roll:    { captions: [["THE ROLL IS FINAL.", 0], ["ROTATION COMPLETE.", 0.62]] }
   };
 
