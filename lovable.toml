@@ -1,7 +1,7 @@
 [run]
-dev = "node server.mjs"
-build = "rm -rf dist && cp -r site dist"
-"build:dev" = "rm -rf dist && cp -r site dist"
+dev = "npm run dev"
+build = "npm run build"
+"build:dev" = "npm run build:dev"
 
 [deploy]
 output = "dist"
