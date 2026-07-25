@@ -7,3 +7,6 @@ build/tmp/
 .DS_Store
 Thumbs.db
 node_modules/
+
+# Vite build output
+dist/

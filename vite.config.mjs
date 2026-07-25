@@ -28,6 +28,11 @@ function copyStaticRuntimeFiles() {
 
 export default defineConfig({
   root: "site",
+  // Relative asset URLs. GitHub Pages serves this from the subpath
+  // /shawarma-shenanigans/, where Vite's default absolute "/assets/..."
+  // resolves against the domain root and 404s. Relative works on both
+  // that subpath and at the root of a lovable.app domain.
+  base: "./",
   publicDir: false,
   appType: "mpa",
   build: {
