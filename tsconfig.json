@@ -1,0 +1,4 @@
+{
+  "compilerOptions": { "noEmit": true, "skipLibCheck": true },
+  "include": [".noop/**/*.ts"]
+}
