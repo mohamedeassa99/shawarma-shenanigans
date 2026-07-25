@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>THE ROTATION — A Field Investigation</title>
+<meta name="description" content="The Rotation Bureau presents a field investigation into the shawarma. Based on actual events. It has not stopped since 1870." />
+<meta name="theme-color" content="#0B0906" />
+<meta property="og:title" content="THE ROTATION — A Field Investigation" />
+<meta property="og:description" content="It has not stopped since 1870. Based on actual events." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+<!-- ══════════ PRELOADER ══════════ -->
+<div id="preloader" class="preloader">
+  <div class="preloader__inner">
+    <div class="preloader__bar"><span id="preloader-fill"></span></div>
+    <p class="mono preloader__status" id="preloader-status">DECLASSIFYING FRAME 001…</p>
+  </div>
+</div>
+
+<!-- ══════════ COLD OPEN ══════════ -->
+<div id="coldopen" class="coldopen" hidden>
+  <p class="coldopen__card" data-card="1">THE ROTATION BUREAU<br /><span>PRESENTS</span></p>
+  <p class="coldopen__card" data-card="2">A FIELD INVESTIGATION</p>
+  <p class="coldopen__card" data-card="3">BASED ON ACTUAL EVENTS</p>
+</div>
+
+<main id="main" hidden>
+
+  <!-- ══════════ THE ROTATION — pinned scroll-scrubbed film ══════════ -->
+  <section class="rotation" id="rotation" aria-label="The Rotation: a scroll-driven film of a shawarma being made">
+    <div class="rotation__stage">
+      <canvas id="film" class="film"></canvas>
+
+      <div class="grain" aria-hidden="true"></div>
+      <div class="vignette" aria-hidden="true"></div>
+      <div class="bar bar--top" aria-hidden="true"></div>
+      <div class="bar bar--bottom" aria-hidden="true"></div>
+      <div class="flash" id="flash" aria-hidden="true"></div>
+
+      <!-- HUD -->
+      <div class="hud hud--tl mono">
+        <span class="rec" aria-hidden="true"></span> REC
+        <span class="hud__dim" id="hud-shot">SHOT 01 / 06</span>
+      </div>
+      <div class="hud hud--tr mono">
+        <span class="badge">RATED E‑X</span>
+        <span class="hud__dim">EXTREME ROTATION · SOME SAUCE</span>
+      </div>
+      <div class="hud hud--bl mono">
+        <span class="hud__dim">REV.</span> <span id="odometer">0</span>
+      </div>
+
+      <p class="caption" id="caption" aria-live="polite"></p>
+
+      <div class="endcard" id="endcard" hidden>
+        <p class="endcard__rated">RATED: EXTREMELY.</p>
+        <p class="endcard__sub">You lack the rotational discipline.</p>
+      </div>
+
+      <div class="scrollhint mono" id="scrollhint">SCROLL ▾</div>
+    </div>
+  </section>
+
+  <!-- ══════════ STATEMENT OF FINDINGS ══════════ -->
+  <section class="sec" id="findings">
+    <div class="wrap">
+      <p class="eyebrow mono">SECTION 01 · UNCLASSIFIED</p>
+      <h2 class="h2">STATEMENT<br />OF FINDINGS</h2>
+      <div class="cols">
+        <p class="lede">In 1870, in Bursa, a cook took a spit that had been horizontal for several thousand years and turned it <em>vertical</em>. This is the entire founding event. Everything after it is consequence.</p>
+        <div class="body">
+          <p>The Bureau was not founded. The Bureau was <span class="rd" data-real="hungry">████████</span> and began taking notes.</p>
+          <p>Every fact on this page is true and independently verifiable. We have checked. We checked again. The name itself is a confession: <em>shawarma</em> descends from the Turkish <em>çevirme</em>, from <em>çevirmek</em>, meaning <strong>to turn</strong>. The food is not named for its meat, its bread, its spice, or its country. It is named after the rotation.</p>
+          <p>We did not choose this name. We inherited it.</p>
+        </div>
+      </div>
+      <p class="pull">PIVOT EVENT: 90°. DATE: c. 1870. LOCATION: BURSA. WITNESSES: UNKNOWN.</p>
+    </div>
+  </section>
+
+  <!-- ══════════ THE CELLS ══════════ -->
+  <section class="sec sec--alt" id="cells">
+    <div class="wrap">
+      <p class="eyebrow mono">SECTION 02 · DISTRIBUTION</p>
+      <h2 class="h2">THE CELLS</h2>
+      <p class="lede">The same rotation operates on five continents under five different names. It did not spread. It <em>arrived</em>.</p>
+
+      <div class="corkboard">
+        <svg viewBox="0 0 1000 460" class="map" role="img" aria-label="Map showing five cities connected by red string: Bursa, Beirut, Athens, Berlin, and Puebla">
+          <defs>
+            <filter id="soft"><feGaussianBlur stdDeviation="1.4" /></filter>
+          </defs>
+          <g class="map__land" id="map-land"></g>
+          <g class="map__string" id="map-string"></g>
+          <g class="map__nodes" id="map-nodes"></g>
+        </svg>
+      </div>
+
+      <div class="cellgrid" id="cellgrid"></div>
+      <p class="pull">THE BUREAU DOES NOT EXPAND. IT ARRIVES.</p>
+    </div>
+  </section>
+
+  <!-- ══════════ STANDING DISPUTES ══════════ -->
+  <section class="sec" id="disputes">
+    <div class="wrap">
+      <p class="eyebrow mono">SECTION 03 · UNRESOLVED</p>
+      <h2 class="h2">STANDING<br />DISPUTES</h2>
+      <p class="lede">Five open case files. None will be closed. The Bureau has stopped trying.</p>
+
+      <div class="cases">
+        <div class="cases__tabs mono" id="case-tabs" role="tablist" aria-label="Case files"></div>
+        <div class="cases__panel" id="case-panel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ EXHIBITS ══════════ -->
+  <section class="sec sec--alt" id="exhibits">
+    <div class="wrap">
+      <p class="eyebrow mono">SECTION 04 · EVIDENCE</p>
+      <h2 class="h2">EXHIBITS</h2>
+
+      <div class="exhibits">
+        <article class="exhibit">
+          <p class="exhibit__tag mono">EXHIBIT A · TOUM PROTOCOL</p>
+          <h3 class="h3">NO EGG.<br />NO DAIRY.<br />NO EXPLANATION.</h3>
+          <p><em>Toum</em> (ثوم) translates to "garlic." Not "garlic sauce." Just garlic. The sauce is so definitional that the language saw no reason to distinguish between the plant and the emulsion.</p>
+          <p>It contains garlic, oil, lemon, salt. Nothing else. No egg, no dairy, nothing that would normally hold an emulsion together. It is held up by garlic's own structure and the sheer will of whoever is making it.</p>
+          <div class="alert mono">
+            <strong>THE EMULSION EVENT · CLASSIFIED.</strong>
+            Add the oil too quickly and the emulsion collapses into oily separation. There is no partial credit. Approximately 1 in 4 first attempts survive. Survivors do not discuss it. The Bureau maintains no records of the failures, at the request of the families.
+          </div>
+        </article>
+
+        <article class="exhibit">
+          <p class="exhibit__tag mono">EXHIBIT B · THE PICKLE STANDARD</p>
+          <h3 class="h3">THE PINK<br />WAS NEVER<br />REAL.</h3>
+          <p>Subject is not pink. Subject has never been pink. Those luminous magenta batons are turnips, <em>lift</em> (لفت), and turnips are white.</p>
+          <p>One slice of beetroot, introduced at brining, colours the entire vessel. The whole jar borrows its identity from a single unrelated vegetable sitting quietly in the corner.</p>
+          <p class="note mono">The Bureau has questions about what else operates this way.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ GLOSSARY ══════════ -->
+  <section class="sec" id="glossary">
+    <div class="wrap">
+      <p class="eyebrow mono">SECTION 05 · TERMINOLOGY</p>
+      <h2 class="h2">GLOSSARY</h2>
+      <p class="lede">Definitions are supplied without commentary.</p>
+      <dl class="gloss" id="gloss"></dl>
+    </div>
+  </section>
+
+  <!-- ══════════ THE HOURS + FIELD NOTE ══════════ -->
+  <section class="sec sec--alt" id="hours">
+    <div class="wrap">
+      <div class="duo">
+        <div>
+          <p class="eyebrow mono">SECTION 06 · OPERATING WINDOW</p>
+          <h2 class="h2">THE HOURS</h2>
+          <p>Peak observed activity: <strong>0200–0400 local.</strong></p>
+          <p>The Bureau does not keep business hours. The Bureau keeps the hours you keep when something has gone very wrong, or gone extremely well.</p>
+        </div>
+        <div>
+          <p class="eyebrow mono">FIELD NOTE 11‑C</p>
+          <h2 class="h2">THE COUNTER</h2>
+          <p>There is no queue. There has never been a queue.</p>
+          <p>Newcomers report waiting to be called. They are not going to be called. Approach the counter. State the order.</p>
+          <p class="note mono">This is the test.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ PROJECTIONS ══════════ -->
+  <section class="sec" id="projections">
+    <div class="wrap">
+      <p class="eyebrow mono">SECTION 07 · PROJECTIONS</p>
+      <h2 class="h2">PROJECTIONS</h2>
+      <div class="proj" id="proj"></div>
+    </div>
+  </section>
+
+  <!-- ══════════ CLEARANCE ══════════ -->
+  <section class="sec sec--alt" id="clearance">
+    <div class="wrap">
+      <p class="eyebrow mono">SECTION 08 · PERSONNEL</p>
+      <h2 class="h2">CLEARANCE<br />LEVELS</h2>
+      <div class="levels" id="levels"></div>
+    </div>
+  </section>
+
+  <!-- ══════════ FORM 27-B ══════════ -->
+  <section class="sec" id="apply">
+    <div class="wrap wrap--narrow">
+      <p class="eyebrow mono">SECTION 09 · INTAKE</p>
+      <h2 class="h2">FORM 27‑B</h2>
+      <p class="lede">Application for rotational clearance. Complete in full. Incomplete forms are retained anyway.</p>
+
+      <form id="form27b" class="form" novalidate>
+        <fieldset class="field">
+          <legend class="field__legend mono">01 · POSITION ON FRIES‑INSIDE <span class="req">REQUIRED</span></legend>
+          <p class="field__help">There is no neutral party.</p>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="fries" value="FOR" required /><span class="choice__box"></span><span class="choice__label">FOR</span></label>
+            <label class="choice"><input type="radio" name="fries" value="AGAINST" required /><span class="choice__box"></span><span class="choice__label">AGAINST</span></label>
+          </div>
+          <p class="err mono" id="err-fries" hidden>A POSITION IS MANDATORY. ABSTENTION IS NOT A POSITION.</p>
+        </fieldset>
+
+        <fieldset class="field">
+          <legend class="field__legend mono">02 · DECLARATIONS</legend>
+          <label class="check"><input type="checkbox" name="toum" /><span class="check__box"></span><span>I have broken a toum and filed no report.</span></label>
+          <label class="check"><input type="checkbox" name="tomato" /><span class="check__box"></span><span>I know why the tomato is up there.</span></label>
+          <label class="check"><input type="checkbox" name="queue" /><span class="check__box"></span><span>I have approached a counter at 0300 without hesitating.</span></label>
+        </fieldset>
+
+        <button type="submit" class="btn">APPROACH THE COUNTER</button>
+      </form>
+
+      <div class="stamp" id="stamp" hidden>
+        <p class="stamp__big">YOU HAVE BEEN SEEN.</p>
+        <p class="stamp__sub mono">DO NOT WAIT TO BE CALLED.</p>
+        <p class="stamp__meta mono" id="stamp-meta"></p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="wrap">
+      <p class="foot__doc mono">DOCUMENT REF: SHW/1870/ROT‑9 · CLASSIFICATION: OPEN · REVIEWED BY: NO ONE</p>
+      <p class="foot__legal">The Bureau accepts no liability for emulsion failures. Serving suggestion is not a suggestion. The origin of the shawarma is claimed by Turkey, Syria, Lebanon and Palestine; the Bureau takes no position and never will.</p>
+      <p class="foot__page mono">PAGE 1 OF 1. THERE IS NO PAGE 2. STOP ASKING.</p>
+    </div>
+  </footer>
+
+</main>
+
+<script src="./main.js"></script>
+</body>
+</html>

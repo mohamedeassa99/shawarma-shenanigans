@@ -1,0 +1,9 @@
+# Higgsfield source media — regenerable, and large (~45MB).
+# The derived WebP frame sequence in site/frames/ IS committed; it is the site.
+build/clips/
+build/keys/
+build/tmp/
+
+.DS_Store
+Thumbs.db
+node_modules/
