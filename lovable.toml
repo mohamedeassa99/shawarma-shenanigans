@@ -1,6 +1,7 @@
 [run]
-build = "true"
-"build:dev" = "true"
+dev = "python3 -m http.server 8080 --directory site --bind 0.0.0.0"
+build = "rm -rf dist && cp -r site dist"
+"build:dev" = "rm -rf dist && cp -r site dist"
 
 [deploy]
-output = "site"
+output = "dist"
