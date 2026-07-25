@@ -1,0 +1,5 @@
+{
+  "compilerOptions": { "noEmit": true, "skipLibCheck": true, "allowJs": false },
+  "files": [],
+  "include": []
+}
