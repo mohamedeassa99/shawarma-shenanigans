@@ -186,9 +186,14 @@
     const hintEl  = $("#scrollhint");
     const shotEl  = $("#hud-shot");
 
+    /* Frames default to this origin, but a host that cannot carry 238 binary
+       assets (e.g. an agent-built sandbox) can set window.FRAMES_BASE to an
+       absolute URL and serve them from elsewhere. */
+    const BASE = (window.FRAMES_BASE || "./frames").replace(/\/$/, "");
+
     let manifest;
     try {
-      manifest = await (await fetch("./frames/manifest.json", { cache: "force-cache" })).json();
+      manifest = await (await fetch(BASE + "/manifest.json", { cache: "force-cache" })).json();
     } catch {
       document.body.classList.add("no-film");
       reveal();
@@ -204,11 +209,13 @@
 
     const imgs   = new Array(TOTAL);
     const ready  = new Array(TOTAL).fill(false);
-    const src    = i => `./frames/f_${String(i + 1).padStart(3, "0")}.webp`;
+    const src    = i => `${BASE}/f_${String(i + 1).padStart(3, "0")}.webp`;
 
     const load = i => new Promise(res => {
       const im = new Image();
       im.decoding = "async";
+      // Keeps the canvas untainted when frames are served cross-origin.
+      im.crossOrigin = "anonymous";
       im.onload = () => { imgs[i] = im; ready[i] = true; res(); };
       im.onerror = res;
       im.src = src(i);
