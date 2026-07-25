@@ -1,5 +1,6 @@
 [run]
 build = "true"
+"build:dev" = "true"
 
 [deploy]
 output = "site"
