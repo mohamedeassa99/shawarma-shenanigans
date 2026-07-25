@@ -247,10 +247,13 @@
       }
       const im = imgs[i];
       if (!im || i === lastDrawn) return;
-      lastDrawn = i;
 
       const dpr = Math.min(devicePixelRatio || 1, 2);
       const w = canvas.clientWidth, h = canvas.clientHeight;
+      // Layout not settled yet. Bail before recording lastDrawn, or this
+      // no-op draw would mark the frame painted and never be retried.
+      if (!w || !h) return;
+      lastDrawn = i;
       if (canvas.width !== Math.round(w * dpr)) {
         canvas.width  = Math.round(w * dpr);
         canvas.height = Math.round(h * dpr);
