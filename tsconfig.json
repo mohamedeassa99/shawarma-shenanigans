@@ -1,5 +1,4 @@
 {
-  "compilerOptions": { "noEmit": true, "skipLibCheck": true, "allowJs": false },
-  "files": [],
-  "include": []
+  "compilerOptions": { "noEmit": true, "skipLibCheck": true },
+  "include": [".noop/**/*.ts"]
 }
