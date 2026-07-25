@@ -1,0 +1,5 @@
+[run]
+build = "true"
+
+[deploy]
+output = "site"
