@@ -6,5 +6,8 @@
     "dev": "node server.mjs",
     "build": "rm -rf dist && cp -r site dist",
     "build:dev": "rm -rf dist && cp -r site dist"
+  },
+  "devDependencies": {
+    "vite": "^8.1.5"
   }
 }
